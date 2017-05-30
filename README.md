@@ -7,7 +7,7 @@ Files
 -----
 
 - `apiary.apib` -> API Blueprint
-- `dredd.yaml` -> config file for Dredd, the testing tool
+- `dredd.yml` -> config file for Dredd, the testing tool
 - `setenv.sh` -> set local environment (workaround for my issues)
 
 Notes
