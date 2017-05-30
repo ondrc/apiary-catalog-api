@@ -1,0 +1,66 @@
+FORMAT: 1A
+HOST: http://demo.j4c.io:31065/
+
+# catalog
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Category List [/catalog/category/list]
+
+### List All Categories [GET]
+
++ Response 200 (application/json)
+
+        [
+            1,
+            2,
+            3
+        ]
+
+## Category Detail [/catalog/category/1]
+
+### Get Category [GET]
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "name": "Software"
+        }
+
+## Product List [/catalog/products/list]
+
+### List All Products [GET]
+
++ Response 200 (application/json)
+
+        [
+            1,
+            2,
+            3
+        ]
+
+## Product By Category List [/catalog/products/list/1]
+
+### List All Products [GET]
+
++ Response 200 (application/json)
+
+        [
+            1,
+            2
+        ]
+
+## Product Detail [/catalog/products/1]
+
+### Get Product By Id [GET]
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "catIds": [ 1 ],
+            "name": "Linux"
+            "description": "OSOS",
+            "image": "img/linux.png"
+        }
