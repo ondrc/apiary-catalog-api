@@ -1,5 +1,5 @@
-Catalog API
-===========
+Product Catalog API
+===================
 
-Playing with APIary.
+Playing with Apiary: API blueprint of a Product Catalog - a sample microservice.
 
