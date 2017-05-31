@@ -8,7 +8,7 @@ Files
 
 - `apiary.apib` -> API Blueprint
 - `dredd.yml` -> config file for Dredd, the testing tool
-- `setenv.sh` -> set local environment (workaround for my issues)
+- `setenv.sh` -> set local environment (workaround for not being able to install dredd in global mode)
 
 Notes
 -----
