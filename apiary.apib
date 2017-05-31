@@ -10,12 +10,14 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 ### List All Categories [GET]
 
 + Response 200 (application/json)
+    + Attributes (array[number])
+    + Body
 
-        [
-            1,
-            2,
-            3
-        ]
+            [
+                1,
+                2,
+                3
+            ]
 
 ## Category Detail [/catalog/categories/{category_id}]
 
@@ -25,51 +27,72 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 ### Get Category [GET]
 
 + Response 200 (application/json)
+    + Attributes (Category)
+    + Body
 
-        {
-            "id": 1,
-            "name": "Software"
-        }
+            {
+                "id": 1,
+                "name": "Software"
+            }
 
 ## Product List [/catalog/products/list]
 
-### List All Products [GET]
+### List All [GET]
 
 + Response 200 (application/json)
+    + Attributes (array[number])
+    + Body
 
-        [
-            1,
-            2,
-            3
-        ]
+            [
+                1,
+                2,
+                3
+            ]
 
 ## Product By Category List [/catalog/products/list/{category_id}]
 
-+ Patameters
++ Parameters
     + category_id: `1` (number, required) - ID of a category
 
-### List All Products [GET]
+### List All [GET]
 
 + Response 200 (application/json)
+    + Attributes (array[number])
+    + Body
 
-        [
-            1,
-            2
-        ]
+            [
+                1,
+                2
+            ]
 
 ## Product Detail [/catalog/products/{product_id}]
 
-+ Patameters
++ Parameters
     + product_id: `1` (number, required) - ID of a product
 
 ### Get Product By Id [GET]
 
 + Response 200 (application/json)
+    + Attributes (Product)
+    + Body
 
-        {
-            "id": 1,
-            "catId": [ 1 ],
-            "name": "Linux",
-            "description": "OSOS",
-            "image": "img/linux.png"
-        }
+            {
+                "id": 1,
+                "catId": [ 1 ],
+                "name": "Linux",
+                "description": "OSOS",
+                "image": "img/linux.png"
+            }
+
+## Data Structures
+
+### Category
++ id: `1` (number, required) - unique identirier
++ name: `Software` (string, required) - human readable name
+
+### Product
++ id: `1` (number, required) - unique identifier
++ catId (array[number], required) - list of category identifiers
++ name: `Notepad++` (string, required) - human readable name of product
++ description: `Text editor on steroids` (string, optional) - human readable description of product
++ image: `img/notepad.png` (string, optional) - relative path to static image
