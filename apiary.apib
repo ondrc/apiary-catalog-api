@@ -17,7 +17,10 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             3
         ]
 
-## Category Detail [/catalog/categories/1]
+## Category Detail [/catalog/categories/{category_id}]
+
++ Parameters
+    + category_id: `1` (number, required) - ID of a category
 
 ### Get Category [GET]
 
@@ -35,12 +38,15 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         [
-            1,
+de            1,
             2,
             3
         ]
 
-## Product By Category List [/catalog/products/list/1]
+## Product By Category List [/catalog/products/list/{category_id}]
+
++ Patameters
+    + category_id: `1` (number, required) - ID of a category
 
 ### List All Products [GET]
 
@@ -51,7 +57,10 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             2
         ]
 
-## Product Detail [/catalog/products/1]
+## Product Detail [/catalog/products/{product_id}]
+
++ Patameters
+    + product_id: `1` (number, required) - ID of a product
 
 ### Get Product By Id [GET]
 
